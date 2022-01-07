@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="desain.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinc Corp Registration Form</title>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+    
+    <div class="container"> <!--Start div container-->
+        <form id="survey-form"> <!--Start Form-->
+            <!-- Nama -->
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label id="email-label" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Umur -->
+            <div class="form-group">
+                <label id="number-label" for="number">Age<span class="clue">(optional)</span> </label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age">
+            </div>
+
+            <!-- Dropdown menu -->
+            <div class="form-group">
+                <p>Choose option that describe your current condition</p>
+                <select name="role" id="dropdown" class="form-control" required>
+                    <option disabled selected value>Please choose one</option>
+                    <option value="student">Student</option>
+                    <option value="unemployed">Unemployed</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Rekomendasi -->
+            <div class="form-group">
+                <p>Would you recommend our services to your family and friends?</p>
+                
+                <label>
+                    <input type="radio" name="user-recommend" value="definitely" class="input-radio">
+                Definitely
+                </label>
+
+                <label>
+                    <input type="radio" name="user-recommend" value="maybe" class="input-radio">
+                Maybe
+                </label>
+
+                <label>
+                    <input type="radio" name="user-recommend" value="not-sure" class="input-radio">
+                Not sure
+                </label>
+            </div>
+
+            <!-- Saran pengembangan -->
+            <div class="form-group">
+                <p>What kind of services do you want to have from us?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+            </div>
+
+            <label>
+                <input type="checkbox" name="prefer" value="it-infrastructures" class="input-checkbox">
+                IT Infrastructures
+            </label>
+
+            <label>
+                <input type="checkbox" name="prefer" value="it-consultant" class="input-checkbox">
+                IT Consultant
+            </label>
+
+            <label>
+                <input type="checkbox" name="prefer" value="system-analyst" class="input-checkbox">
+                System Analyst
+            </label>
+
+            <!-- <label>
+                <input type="checkbox" name="prefer" value="videos" class="input-checkbox">
+                Videos
+            </label>
+
+            <label>
+                <input type="checkbox" name="prefer" value="forum" class="input-checkbox">
+                Forum
+            </label>
+
+            <label>
+                <input type="checkbox" name="prefer" value="additional-courses" class="input-checkbox">
+                Additional Courses
+            </label> -->
+
+            <!-- Komentar dan sugesti -->
+            <div class="form-group">
+                <p class="bottom-word">Any comments and suggestions please write it inside the text box below that we provide</p>
+                <textarea name="comment" id="comments" class="input-textarea" placeholder="Enter your comments and suggestions here...."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button" onclick="alertMessage()">Submit</button>
+            </div>
+        </form> <!--End form-->  
+    </div> <!--End div container-->
+
+    <script src="./apply.js"></script>
+</body>
+</html>
